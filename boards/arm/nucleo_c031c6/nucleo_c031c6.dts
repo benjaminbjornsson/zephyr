@@ -108,3 +108,7 @@
 	pinctrl-names = "default";
 	status = "okay";
 };
+
+&die_temp {
+	status = "okay";
+};
