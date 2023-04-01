@@ -399,7 +399,7 @@
 	};
 
 	die_temp: dietemp {
-		compatible = "st,stm32-temp-cal";
+		compatible = "st,stm32-temp-cal-v2";
 		ts-cal1-addr = <0x1FFF75A8>;
 		ts-cal2-addr = <0x1FFF75CA>;
 		ts-cal1-temp = <30>;

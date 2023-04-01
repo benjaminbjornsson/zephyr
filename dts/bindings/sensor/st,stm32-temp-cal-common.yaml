@@ -1,9 +1,7 @@
 # Copyright (c) 2022, Wouter Cappelle
 # SPDX-License-Identifier: Apache-2.0
 
-description: STM32 family TEMP node for production calibrated sensors like L5/U5
-
-compatible: "st,stm32-temp-cal"
+description: Common fields for STM32 family TEMP production calibrated sensors
 
 include: [base.yaml, "st,stm32-temp-common.yaml"]
 
@@ -13,24 +11,12 @@ properties:
     required: true
     description: address of parameter TS_CAL1
 
-  ts-cal2-addr:
-    type: int
-    required: true
-    description: address of parameter TS_CAL2
-
   ts-cal1-temp:
     type: int
     required: true
     description: |
       temperature at which temperature sensor has been
       calibrated in production for data into ts-cal1-addr
-
-  ts-cal2-temp:
-    type: int
-    required: true
-    description: |
-      temperature at which temperature sensor has been
-      calibrated in production for data into ts-cal2-addr
 
   ts-cal-vrefanalog:
     type: int

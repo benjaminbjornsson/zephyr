@@ -15,9 +15,8 @@ LOG_MODULE_REGISTER(stm32_temp, CONFIG_SENSOR_LOG_LEVEL);
 #define CAL_RES 12
 #if DT_HAS_COMPAT_STATUS_OKAY(st_stm32_temp)
 #define DT_DRV_COMPAT st_stm32_temp
-#define HAS_CALIBRATION 0
-#elif DT_HAS_COMPAT_STATUS_OKAY(st_stm32_temp_cal)
-#define DT_DRV_COMPAT st_stm32_temp_cal
+#elif DT_HAS_COMPAT_STATUS_OKAY(st_stm32_temp_cal_v2)
+#define DT_DRV_COMPAT st_stm32_temp_cal_v2
 #define HAS_CALIBRATION 1
 #else
 #error "No compatible devicetree node found"
