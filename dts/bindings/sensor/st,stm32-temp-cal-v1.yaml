@@ -1,0 +1,19 @@
+# Copyright (c) 2022, Benjamin Björnsson <benjamin.bjornsson@gmail.com>
+# SPDX-License-Identifier: Apache-2.0
+
+description:  |
+    STM32 family TEMP node for production calibrated sensors like C0
+    with a single calibration temperature.
+
+compatible: "st,stm32-temp-cal-v1"
+
+include: "st,stm32-temp-cal-common.yaml"
+
+properties:
+  avgslope:
+    type: int
+    default: 253
+    description: |
+      Average slope of T-V chart (in mV/C x100) according to
+      datasheet "Electrical characteristics/Operating conditions"
+      STM32C0 Table 5.3.16 (min 2.4 mV/C, max 2.65, typ: 2.53)
